@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cancer Detection and Diagnosis</title>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/tether.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/custom.js')}}" type="text/javascript"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card_flips.css')}}">
+
+</head>
+
+<body>
+
+    {% include "navbar.html" %}
+
+    <div class="container mt-lg-6 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-12">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <center>
+                                <div class="card">
+                                    <img class="card-img-top"
+                                        src="{{ url_for('static', filename='assets/prognosis.jpg')}}"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5>Prognosis</h5>
+                                        <p class="card-text">Early detection of diseases through non-invasive methods
+                                        </p>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-header">
+                                    Prognosis
+                                </div>
+                                <div class="card-body">
+
+                                    <p class="card-text">Prognosis involves early detection/risk assesment through
+                                        lifestyle habits and
+                                        simpler, non-invasive tests. </p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="/prognosis/breast_cancer" class="btn btn-primary btn-md">Breast cancer</a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <a href="/prognosis/cervical_cancer" class="btn btn-primary btn-md">Cervical cancer</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mt-lg-0 mt-2">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <center>
+                                <div class="card">
+                                    <img class="card-img-top"
+                                        src="{{ url_for('static', filename='assets/diagnosis.jpg')}}"
+                                        alt="Card image cap">
+
+                                    <div class="card-body">
+                                        <h5>Diagnosis</h5>
+                                        <p class="card-text">Diagnosis of cancer through tissue samples</p>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-header">
+                                    Diagnosis
+                                </div>
+
+                                <div class="card-body">
+                                    <p>Diagnosing of patients using pathological tissue samples</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="/diagnosis/breast_cancer" class="btn btn-primary btn-md">Breast cancer</a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <a href="/diagnosis/skin_cancer"
+                                                    class="btn btn-primary btn-md">Skin cancer</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="card-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 mt-lg-0 mt-2">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <center>
+                                <div class="card">
+                                    <img class="card-img-top"
+                                        src="{{ url_for('static', filename='assets/drug_discovery.png')}}"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5>Drug discovery</h5>
+                                        <p class="card-text">Discovering new chemotheraphy drugs using protein
+                                            inhibitor
+                                            fingerprints</p>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-header">
+                                    Drug discovery
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Cancer inhibitor classification</h4>
+                                    <p class="card-text">Classification of molecules as different types of inhibitors
+                                        using
+                                        their drug fingerprints</p>
+                                    <a href="/drug_discovery/protein_inhibitors" class="btn btn-primary btn-md">Learn more</a>
+                                </div>
+                                <div class="card-footer"></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>
